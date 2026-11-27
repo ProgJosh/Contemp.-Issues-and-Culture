@@ -106,7 +106,18 @@
       return current;
     };
 
-    setCurrent(navLinks, pick(navSections));
+    // Short final sections may never reach the selection line before scrolling ends.
+    const atPageEnd =
+      window.scrollY > 0 &&
+      window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 1;
+    const finalSection = navSections[navSections.length - 1];
+    const finalSectionVisible =
+      finalSection && finalSection.element.getBoundingClientRect().top < window.innerHeight;
+
+    setCurrent(
+      navLinks,
+      atPageEnd && finalSectionVisible ? finalSection.id : pick(navSections)
+    );
 
     const skillsSection = document.getElementById("skills");
     const skillsRect = skillsSection?.getBoundingClientRect();
