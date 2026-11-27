@@ -1,0 +1,13 @@
+# Publish the site entry point and the assets it references.
+*
+!/index.html
+!/styles.css
+!/script.js
+!/favicon.svg
+!/assets/
+!/assets/AI and Fashion_ Six-Slide Presentation Montage.png
+!/assets/Modern Assignment Planner Dashboard.png
+!/assets/contri.png
+!/assets/group-task.png
+!/assets/ref.png
+!/assets/submission-status.png

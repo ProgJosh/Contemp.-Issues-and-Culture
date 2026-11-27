@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers static-assets deployment for the skills log site.
+  // Deploy with: wrangler deploy
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "grace-velo-skills-log",
+  "compatibility_date": "2026-11-27",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "none"
+  }
+}
